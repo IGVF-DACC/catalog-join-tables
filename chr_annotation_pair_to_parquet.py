@@ -57,7 +57,7 @@ parsed_lds = parsed_lds.drop('Uniq_ID_1', 'Uniq_ID_2', '+/-corr').withColumn('R2
 
 parsed_lds = parsed_lds.withColumn('label', lit(args['label'])).withColumn('source', lit(args['source'])).withColumn('source_url', lit(args['source_url'])).withColumn('chr', lit(args['chr'])).withColumn('ancestry', lit(args['ancestry']))
 
-parsed_lds = parsed_lds.withColumn('key', generate_unique_id_udf(col('ancestry'), col('chr'), col('variant_1_base_pair'), col('variant_2_base_pair'))) 
+parsed_lds = parsed_lds.withColumn('key', generate_unique_key_udf(col('ancestry'), col('chr'), col('variant_1_base_pair'), col('variant_2_base_pair'))) 
 
 # Write output as parquet to S3
 parsed_lds.write.mode(args['write_mode']).parquet(args['output_path'])

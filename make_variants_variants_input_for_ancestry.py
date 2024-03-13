@@ -9,7 +9,7 @@ def make_annotation_file_name(ancestry, chromosome):
     return ancestry + '_' + chromosome + ANNOTATIONS_FILE_SUFFIX
 
 def make_lds_file_name(ancestry, chromosome):
-    return ancestry + '_' + chromosome + ANNOTATIONS_FILE_SUFFIX
+    return ancestry + '_' + chromosome + LDS_FILE_SUFFIX
 
 def complete_file_name_to_s3_path(filename, s3_prefix):
     return s3_prefix + filename

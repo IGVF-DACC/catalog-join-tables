@@ -48,8 +48,8 @@ process_uniq_id_udf = udf(parse_base_pairs_from_uniq_id, StringType())
 annotations = spark.read.option('header', 'true').csv(args['annotations_path'])
 lds = spark.read.option('header', 'true').csv(args['lds_path'])
 
-joined_lds_1 = lds.join(annotations, lds.SNP1 == annotations.Position, 'left').select(col('rsID').alias('variant_1_rsid'), col('SNP2'), col('Uniq_ID_1'), col('Uniq_ID_2'), col('R2'), col('Dprime'), col('+/-corr'))
-joined_lds_2 = joined_lds_1.join(annotations, joined_lds_1.SNP2 == annotations.Position, 'left').select(col('variant_1_rsid'), col('rsID').alias('variant_2_rsid'), col('Uniq_ID_1'), col('Uniq_ID_2'), col('R2'), col('Dprime'), col('+/-corr'))
+joined_lds_1 = lds.join(annotations, col("SNP1") == col("Position"), "left").select(col("rsID").alias("variant_1_rsid"), col("SNP2"), col("Uniq_ID_1"), col("Uniq_ID_2"), col("R2"), col("Dprime"), col("+/-corr"))
+joined_lds_2 = joined_lds_1.join(annotations, col("SNP2") == col("Position"), "left").select(col("variant_1_rsid"), col("rsID").alias("variant_2_rsid"), col("Uniq_ID_1"), col("Uniq_ID_2"), col("R2"), col("Dprime"), col("+/-corr"))
 
 parsed_lds = joined_lds_2.withColumn('inverted', col('+/-corr') == '+').withColumn('variant_1_base_pair', process_uniq_id_udf(col('Uniq_ID_1'))).withColumn('variant_2_base_pair', process_uniq_id_udf(col('Uniq_ID_2')))
 

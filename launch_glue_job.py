@@ -10,11 +10,11 @@ def get_glue_client(profile_name, region_name):
 def get_glue_args_from_json(json_filename):
     with open(json_filename) as fp:
         glue_job_args = json.load(fp)
-    return glue_args
+    return glue_job_args
 
 def main(args):
     client = get_glue_client(args.profile_name, args.region_name)
-    glue_args = get_glue_args(args.input_json_path)
+    glue_args = get_glue_args_from_json(args.input_json_path)
     for argument_item in glue_args:
         client.start_job_run(JobName=args.glue_job_name, Arguments=argument_item)
 

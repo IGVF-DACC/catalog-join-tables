@@ -16,7 +16,6 @@ args = getResolvedOptions(sys.argv,
                 'ancestry',
                 'variants_input_path',
                 'lds_input_prefix',
-                'number_of_output_partitions',
             ]
         )
 
@@ -71,5 +70,5 @@ joined_df2 = joined_df1.join(
     *[col(c).alias(f'variant_2_{c}') for c in variants.columns if c != 'rsid']
 )
 
-joined_df2.repartition(args['number_of_output_partitions']).write.mode('overwrite').parquet(args['output_prefix'] + '/' + 'variants-variants_variants-' + args['ancestry'] + '.parquet')
+joined_df2.write.mode('overwrite').parquet(args['output_prefix'] + '/' + 'variants-variants_variants-' + args['ancestry'] + '.parquet')
 job.commit()

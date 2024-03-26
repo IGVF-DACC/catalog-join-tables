@@ -122,10 +122,15 @@ def parse_vcf_line_to_dictionary(data_line, translator, seq_repo) -> dict:
     return parsed_line
 
 def process_file(file_info):
-    input_file, input_dir, output_dir, translator, seq_repo = file_info
+    input_file, input_dir, output_dir, seq_repo_dir = file_info
     input_file_path = os.path.join(input_dir, input_file)
     output_file = input_file.replace('.vcf.gz', '.jsonl.gz')
     output_file_path = os.path.join(output_dir, output_file)
+
+    dp = create_dataproxy(f'seqrepo+file://{seq_repo_dir}')
+    seq_repo = SeqRepo(seq_repo_dir)
+    translator = Translator(data_proxy=dp)
+
     with gzip.open(input_file_path, 'rt') as input_file, gzip.open(output_file_path, 'wb') as output_file:
         reader = csv.reader(input_file, delimiter='\t')
         writer = jsonlines.Writer(output_file)
@@ -135,9 +140,9 @@ def process_file(file_info):
         for row in reader:
             writer.write(parse_vcf_line_to_dictionary(row, translator, seq_repo))
 
-def process_directory(input_dir, output_dir, translator, seq_repo):
+def process_directory(input_dir, output_dir, seq_repo_dir):
     files = [f for f in os.listdir(input_dir) if f.endswith('.vcf.gz')]
-    file_infos = [(file, input_dir, output_dir, translator, seq_repo) for file in files]
+    file_infos = [(file, input_dir, output_dir, seq_repo_dir) for file in files]
     with multiprocessing.Pool(multiprocessing.cpu_count()) as pool:
         pool.map(process_file, file_infos)
 
@@ -153,12 +158,7 @@ def main():
     parser.add_argument('--seq-repo-dir', required=True, help='Seqrepo location')
     args = parser.parse_args()
 
-    dp = create_dataproxy(f'seqrepo+file://{args.seq_repo_dir}')
-    seq_repo = SeqRepo(args.seq_repo_dir)
-    translator = Translator(data_proxy=dp)
-
-    process_directory(args.input_dir, args.output_dir, translator, seq_repo)
+    process_directory(args.input_dir, args.output_dir, args.seq_repo_dir)
 
 if __name__ == '__main__':
     main()
-

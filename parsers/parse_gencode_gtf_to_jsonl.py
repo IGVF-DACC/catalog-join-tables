@@ -130,11 +130,11 @@ def main():
     args = parser.parse_args()
 
     alias_dict = get_collection_alias(args.gene_alias_file_path)
-    with open(args.input_path, 'r') as input_file, gzip.open(args.output_path, 'wb') as output_file:
+    with gzip.open(args.input_path, 'rt') as input_file, gzip.open(args.output_path, 'wt') as output_file:
         for line in input_file:
             parsed_line = parse_gtf_line_to_dictionary(line, alias_dict, args.version, args.source_url)
             if parsed_line:
-                output_file.write((json.dumps(parsed_line) + '\n').encode('utf-8'))
+                output_file.write((json.dumps(parsed_line) + '\n'))
 
 if __name__ == '__main__':
     main()

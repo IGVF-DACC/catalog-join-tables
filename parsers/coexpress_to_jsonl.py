@@ -18,27 +18,27 @@ def process_file(file_info):
                 co_ensembl_id = entrez_ensembl_dict.get(co_entrez_id)
                 if co_ensembl_id:
                     _id = f"{entrez_id}_{co_entrez_id}_{label}"
-                    _source = f"genes/{ensembl_id}"
-                    _target = f"genes/{co_ensembl_id}"
+                    _source = ensembl_id
+                    _target = co_ensembl_id
                     output.write(json.dumps({
                         '_id': _id,
                         '_source': _source,
                         '_target': _target,
                         'label': label,
-                        'logit_score': score,
+                        'logit_score': float(score),
                         'source': source,
                         'source_url': source_url
                     }) + '\n')
 
 def main():
     parser = argparse.ArgumentParser(description='Coxpresdb Parser')
-    parser.add-argument('--input-dir', type=str, required=True, help='Input directory')
-    parser.add-argument('--output-dir', type=str, required=True, help='Output directory')
-    parser.add-argument('--dataset', type=str, required=True, help='Dataset')
-    parser.add-argument('--label', type=str, required=True, help='Label')
-    parser.add-argument('--source', type=str, required=True, help='Source')
-    parser.add-argument('--source-url', type=str, required=True, help='Source URL')
-    parser.add-argument('--pickle-file', type=str, required=True, help='Path to entrez-to-ensembl.pkl')
+    parser.add_argument('--input-dir', type=str, required=True, help='Input directory')
+    parser.add_argument('--output-dir', type=str, required=True, help='Output directory')
+    parser.add_argument('--dataset', type=str, required=True, help='Dataset')
+    parser.add_argument('--label', type=str, required=True, help='Label')
+    parser.add_argument('--source', type=str, required=True, help='Source')
+    parser.add_argument('--source-url', type=str, required=True, help='Source URL')
+    parser.add_argument('--pickle-file', type=str, required=True, help='Path to entrez-to-ensembl.pkl')
     args = parser.parse_args()
 
     with open(args.pickle_file, 'rb') as f:

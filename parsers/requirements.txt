@@ -1,13 +1,9 @@
-pyyaml
-python-arango
+pyyaml=6.0.1
 biocypher==0.5.16
-pytest
-pytest-mock
-biopython
+biopython==1.83
 owlready2
 rdflib
 obonet==1.0.0
 hgvs==1.5.4
-pre-commit==3.2.1
 ga4gh.vrs==0.8.5
-jsonlines
+jsonlines==4.0.0

@@ -43,11 +43,12 @@ def process_file(input_path, output_path, organism, version, source_url):
                     'version': version,
                     'source_url': source_url
                 }
-                output_file.write(json.dumps({
+                out_json = {
                     '_key': transcript_key,
                     'label': label,
-                    'props': props
-                }) + '\n')
+                }
+                out_json.update(props)
+                output_file.write(json.dumps(out_json) + '\n')
             except:
                 print(f'fail to process for data: {line}')
 

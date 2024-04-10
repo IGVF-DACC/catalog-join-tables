@@ -38,7 +38,7 @@ def main():
     parser.add_argument('--label', type=str, required=True, help='Label')
     parser.add_argument('--source', type=str, required=True, help='Source')
     parser.add_argument('--source-url', type=str, required=True, help='Source URL')
-    parser.add_argument('--pickle-file', type=str, required=True, help='Path to entrez-to-ensembl.pkl')
+    parser.add_argument('--pickle-file', type=str, required=True, help='Path to entrez-to-ensembl.pkl, look in parsing_data_files in repo root.')
     args = parser.parse_args()
 
     with open(args.pickle_file, 'rb') as f:

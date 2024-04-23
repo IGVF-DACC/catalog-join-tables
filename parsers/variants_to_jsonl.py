@@ -118,8 +118,8 @@ def parse_metadata(info):
 
         return info_obj
 
-def build_variant_id(chr, pos_first_ref_base, ref_seq, alt_seq, assembly='GRCh38'):
-    key = '{}_{}_{}_{}_{}'.format(str(chr).replace(
+def build_variant_id(chrom, pos_first_ref_base, ref_seq, alt_seq, assembly='GRCh38'):
+    key = '{}_{}_{}_{}_{}'.format(str(chrom).replace(
         'chr', '').lower(), pos_first_ref_base, ref_seq, alt_seq, assembly)
     return hashlib.sha256(key.encode()).hexdigest()
 
@@ -186,9 +186,11 @@ def build_hgvs_from_spdi(spdi):
     return hgvs
 
 def parse_vcf_line_to_dictionary(data_line, translator, seq_repo) -> dict:
+    variant_id = build_variant_id(data_line[0], data_line[1], data_line[3], data_line[4])
     spdi = build_spdi(data_line[0], data_line[1], data_line[3], data_line[4], translator, seq_repo)
     hgvs = build_hgvs_from_spdi(spdi)
     parsed_line = {
+        '_key': variant_id,
         'chr': f'chr{data_line[0]}',
         'pos:long': int(data_line[1]) - 1,
         'rsid': data_line[2],

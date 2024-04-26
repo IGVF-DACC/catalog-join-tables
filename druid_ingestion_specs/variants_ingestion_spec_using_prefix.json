@@ -1,0 +1,1104 @@
+{
+  "type": "index_parallel",
+  "spec": {
+    "dataSchema": {
+      "dataSource": "variants_chrXY",
+      "timestampSpec": {
+        "column": "timestamp",
+        "format": "iso",
+        "missingValue": null
+      },
+      "dimensionsSpec": {
+        "dimensions": [
+          {
+            "type": "string",
+            "name": "ann_clndisdb",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_tg_sas",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_total",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_epigenetics_repressed",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_gnomad_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_polyphen2_hvar_score",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_alspac_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_prjeb37766_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_pharmgkb_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_amr_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_tg_afr",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "ann_origin",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_nfe",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_aloft_description",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_proximity_to_coding_v2",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_conservation",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_exac_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_prjeb37766_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_fathmm_xf",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_polyphen2_hdiv_score",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_alspac_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_mutation_density",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_mutation_assessor_score",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_variant_annovar",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "pos:long",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_siberian_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_sift_val",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "freq_genome_dk_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_gnomad_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_alt_vcf",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_tg_eur",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_exac_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_ami_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_clnsig",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_proximity_to_coding",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "rsid",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_amr_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_qatari_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_ref_annovar",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_tg_amr",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_genome_dk_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_refseq_category",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_mappability",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_epigenetics",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_pharmgkb_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_metasvm_pred",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_af_fin_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "ann_start_position",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_dbgap_popfreq_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_finrisk_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_prjeb37584_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_mgp_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_proximity_to_tsstes",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_topmed_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_epigenetics_transcription",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_filter_status",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_af_afr",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_estonian_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_nfe_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_cadd_rawscore",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_sas",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_twinsuk_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_finrisk_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_hgdp_stanford_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_prjeb37584_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_mgp_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_northernsweden_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_sgdp_prj_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_afr_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_micro_rna",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_korean_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_hgdp_stanford_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_amr",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_funseq_description",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_mutation_taster_score",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_variant_vcf",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_estonian_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_ami",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_topmed_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_northernsweden_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_fin_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_sgdp_prj_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_epigenetics_active",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_local_nucleotide_diversity",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_eas_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "source",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "string",
+            "name": "_key",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_geneinfo",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_local_nucleotide_diversity_v3",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "source_url",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_local_nucleotide_diversity_v2",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_protein_function_v2",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_raw",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_protein_function_v3",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_asj_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "spdi",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_ref_vcf",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "freq_korea1k_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_oth",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_korean_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_tg_eas",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_vid",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_tommo_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_polyphen_val",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_hapmap_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_sas_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_1000genomes_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "format",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_dbgap_popfreq_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_cadd_phred",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "chr",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_af_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_daghestan_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_daghestan_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_vietnamese_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_hapmap_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_tommo_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "_id",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_twinsuk_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_varinfo",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_asj",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_qatari_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "ann_funseq_value",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_tg_all",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_eas_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "_rev",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_aloft_value",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "hgvs",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_clndn",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "freq_1000genomes_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_afr_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "long",
+            "name": "ann_end_position",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_korea1k_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_alt_annovar",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_vietnamese_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_protein_function",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "freq_page_study_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_conservation_v2",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_bravo_af",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_sift_cat",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "freq_page_study_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_oth_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_apc_transcription_factor",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_nfe_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_chileans_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_eas",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_prjeb36033_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_siberian_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_gnomad_exomes_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_goesp_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_polyphen_cat",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "freq_gonl_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_gnomad_exomes_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_oth_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_goesp_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "ann_af_ami_female",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "string",
+            "name": "ann_clnrevstat",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": true
+          },
+          {
+            "type": "double",
+            "name": "ann_af_asj_male",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_chileans_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_gonl_ref",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          },
+          {
+            "type": "double",
+            "name": "freq_prjeb36033_alt",
+            "multiValueHandling": "SORTED_ARRAY",
+            "createBitmapIndex": false
+          }
+        ],
+        "dimensionExclusions": [
+          "__time",
+          "timestamp"
+        ],
+        "includeAllDimensions": false,
+        "useSchemaDiscovery": false
+      },
+      "metricsSpec": [],
+      "granularitySpec": {
+        "type": "uniform",
+        "segmentGranularity": "MONTH",
+        "queryGranularity": {
+          "type": "none"
+        },
+        "rollup": false,
+        "intervals": ["2000-01-01/2030-01-01"]
+      },
+      "transformSpec": {
+        "filter": null,
+        "transforms": []
+      }
+    },
+    "ioConfig": {
+      "type": "index_parallel",
+      "inputSource": {
+        "type": "s3",
+        "prefixes": [
+          "s3://catalog-columnar/variants/chr_x_y_jsonl/"
+        ],
+        "properties": {}
+      },
+      "inputFormat": {
+        "type": "json",
+        "keepNullColumns": false,
+        "assumeNewlineDelimited": false,
+        "useJsonNodeReader": false
+      },
+      "appendToExisting": false,
+      "dropExisting": false
+    },
+    "tuningConfig": {
+      "type": "index_parallel",
+      "maxRowsPerSegment": 3000000,
+      "appendableIndexSpec": {
+        "type": "onheap",
+        "preserveExistingMetrics": false
+      },
+      "maxRowsInMemory": 1000000,
+      "maxBytesInMemory": 512000000,
+      "skipBytesInMemoryOverheadCheck": false,
+      "maxTotalRows": null,
+      "numShards": null,
+      "splitHintSpec": null,
+      "partitionsSpec": {
+        "type": "dynamic",
+        "maxRowsPerSegment": 3000000,
+        "maxTotalRows": null
+      },
+      "indexSpec": {
+        "bitmap": {
+          "type": "roaring"
+        },
+        "dimensionCompression": "lz4",
+        "stringDictionaryEncoding": {
+          "type": "utf8"
+        },
+        "metricCompression": "lz4",
+        "longEncoding": "longs"
+      },
+      "indexSpecForIntermediatePersists": {
+        "bitmap": {
+          "type": "roaring"
+        },
+        "dimensionCompression": "lz4",
+        "stringDictionaryEncoding": {
+          "type": "utf8"
+        },
+        "metricCompression": "lz4",
+        "longEncoding": "longs"
+      },
+      "maxPendingPersists": 0,
+      "forceGuaranteedRollup": false,
+      "reportParseExceptions": false,
+      "pushTimeout": 0,
+      "segmentWriteOutMediumFactory": null,
+      "maxNumConcurrentSubTasks": 4,
+      "maxRetry": 3,
+      "taskStatusCheckPeriodMs": 1000,
+      "chatHandlerTimeout": "PT10S",
+      "chatHandlerNumRetries": 5,
+      "maxNumSegmentsToMerge": 100,
+      "totalNumMergeTasks": 10,
+      "logParseExceptions": false,
+      "maxParseExceptions": 2147483647,
+      "maxSavedParseExceptions": 0,
+      "maxColumnsToMerge": -1,
+      "awaitSegmentAvailabilityTimeoutMillis": 0,
+      "maxAllowedLockCount": -1,
+      "partitionDimensions": []
+    }
+  },
+  "context": {
+    "forceTimeChunkLock": true,
+    "useLineageBasedSegmentAllocation": true
+  },
+  "dataSource": "variants_chrXY"
+}
